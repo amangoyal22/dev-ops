@@ -1,9 +1,9 @@
 #base image
-FROM alpine
+FROM node:alpine
 
 #intall dependency
-RUN apk add --update redis
-RUN apk add --update gcc
+COPY ./ ./
+RUN npm install
 
 # action of images
-CMD ["redis-server"]
+CMD ["npm", "start"]
