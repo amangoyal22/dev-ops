@@ -1,0 +1,10 @@
+version: '3'
+services: 
+    redis-server:
+        image: 'redis'
+    node-app:
+        restart: always #'no'(never), always(always), on-failure(stopped with an error code) , unless-stopped (till forcebilly stopped)
+        build: .
+        ports: 
+          - "4001:8080"
+        
