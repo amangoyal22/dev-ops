@@ -3,7 +3,7 @@ services:
     - docker
 language: generic 
 before_install:
-    - docker build -t amangoyal22/docker-react -f Docker.dev .
+    - docker build -t amangoyal22/docker-react -f frontend/Docker.dev .
 
 scripts:
     - docker run -e CI=true amangoyal22/docker-react npm run test -- --coverage
